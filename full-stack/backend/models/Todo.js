@@ -16,4 +16,4 @@ const userSchema = new mongoose.Schema({
     }
 }, {timeseries: true});
 
-export const Todo = mongoose.model('todos', userSchema);
+export const Todo = mongoose.model('Todo', userSchema);
