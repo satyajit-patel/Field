@@ -1,19 +1,17 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
-    question: {
+    quote: {
         type: String,
-        required: [true, 'Question is required'],
+        required: true,
         unique: true,
     }, 
-    answer: {
+    poet: {
         type: String,
-        required: [true, 'Answer is required'],
-    },
-    createdBy: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'users'
+        required: true,
     }
 }, {timeseries: true});
 
-export const Todo = mongoose.model('Todo', userSchema);
+const Todo = mongoose.model("Todo", userSchema);
+
+module.exports = Todo;
