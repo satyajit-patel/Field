@@ -4,8 +4,7 @@ const createTodo = async (req, res) => {
     try {
         const id = req.params.id;
         const body = req.body;
-        const result = await Todo.findByIdAndDelete({id: _id});
-
+        const result = await Todo.findByIdAndDelete({_id: id});
         console.log("data deleted");
         return res.status(200).send(result);
     } catch(err) {

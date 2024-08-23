@@ -4,7 +4,7 @@ const createTodo = async (req, res) => {
     try {
         const id = req.params.id;
         const body = req.body;
-        const result = await Todo.findByIdAndUpdate({id: _id}, {quote: body.quote, poet: body.poet});
+        const result = await Todo.findByIdAndUpdate({_id: id}, {quote: body.quote, poet: body.poet});
 
         console.log("data updated");
         return res.status(200).send(result);

@@ -1,9 +1,9 @@
 const Todo = require("../models/Todo.js");
 
-const getTodo = async (req, res) => {
+const getTodos = async (req, res) => {
     try {
+        // return res.status(200).send("OKAY");
         const result = await Todo.find({});
-
         console.log("data fetched");
         return res.status(200).send(result);
     } catch(err) {
@@ -12,4 +12,4 @@ const getTodo = async (req, res) => {
     }
 }
 
-module.exports = getTodo;
+module.exports = getTodos;

@@ -4,7 +4,6 @@ const createTodo = async (req, res) => {
     try {
         const body = req.body;
         const result = await Todo.create({quote: body.quote, poet: body.poet});
-
         console.log("data created");
         return res.status(200).send(result);
     } catch(err) {
